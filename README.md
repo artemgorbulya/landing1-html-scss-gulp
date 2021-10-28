@@ -2,3 +2,5 @@
 - html
 - scss
 - gulp
+gulp dev
+gulp build
