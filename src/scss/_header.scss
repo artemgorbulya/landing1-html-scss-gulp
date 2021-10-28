@@ -1,0 +1,78 @@
+.header{
+  max-width: 1170px;
+  height: 160px;
+  margin: 0 auto;
+  @include flex(center);
+  &__menu{
+    width: 85%;
+    @include flex(space-around);
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+  }
+  &__menu-link{
+    text-decoration: none;
+    color: $head-menu-color;
+  }
+  &__menu-link:hover{
+    text-decoration: none;
+    color: $head-menu-hover-color;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .header{
+    max-width: 1170px;
+    height: 83px;
+    margin: 0 auto;
+    @include flex(flex-end);
+    &__menu{
+      border: 1px solid $header-menu;
+      background-color: $header-menu-bg;
+      width: 200px;
+      font-size: 11px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 60px;
+      z-index: 100;
+      display: none;
+
+
+    }
+    &__menu-item{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 13px;
+      border-bottom: 2px solid $header-menu;
+      width: 182px;
+    }
+    &__menu-item:hover{
+      background-color:  $header-menu;
+      cursor: pointer;
+    }
+    &__menu-link{
+      text-decoration: none;
+      color: $head-menu-color;
+    }
+    &__menu-link:hover{
+      text-decoration: none;
+      color: $head-menu-hover-color;
+    }
+    &__black-square{
+      width: 44px;
+      height: 37px;
+      background-color: $black-square-bg;
+
+
+    }
+  }
+  .black-square{
+    @include flex(center);
+    cursor: pointer;
+  }
+
+}
+
